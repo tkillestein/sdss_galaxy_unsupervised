@@ -26,7 +26,7 @@ for f in tqdm(val_files):
     pa_rot = float(froot.split("_")[-2])  # extract the required rotation
 
     img = load_image_from_path(f)
-    rot_img = (255 * rotate(img, -pa_rot + 90, reshape=False).clip(min=0, max=1)).astype("uint8")
+    rot_img = (255 * rotate(img, -pa_rot + 90, reshape=False).clip(min=0, max=1)).astype("uint8") # from 0-1 -> 0-255 for JPGs
     imwrite(os.path.join(OUT_DIR, "VAL", froot + ".jpg"), rot_img)
 
 for f in tqdm(train_files):
