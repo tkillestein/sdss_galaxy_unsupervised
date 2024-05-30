@@ -1,0 +1,12 @@
+tqdm
+scipy
+imageio
+pandas
+astroquery
+astropy
+tensorflow
+numpy
+matplotlib
+jupyter
+jupyterlab
+scikit-learn
