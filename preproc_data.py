@@ -4,7 +4,7 @@ from utils import load_image_from_path
 from scipy.ndimage import rotate
 from imageio import imwrite
 
-OUT_DIR = "./data/final_64x64_proc"
+OUT_DIR = "./data/final_28x28_proc"
 
 if not os.path.isdir(OUT_DIR):
     os.makedirs(os.path.join(OUT_DIR, "TRAIN"))
@@ -13,7 +13,7 @@ if not os.path.isdir(OUT_DIR):
 # remove all galaxies without reliable PA information.
 # rm ./final_64x64_unproc/glx*_0.0*
 
-input_files = glob.glob("./data/final_64x64_unproc/*.jpg")
+input_files = glob.glob("./data/final_28x28_unproc/*.jpg")
 
 TRAIN_SPLIT = 0.1
 split_idx = int(0.1 * len(input_files))
